@@ -6,7 +6,7 @@
 ## 📚 Dependências utilizadas (Spring Web, Spring Data JPA, Spring DevTools, H2 DataBase & Lombok)
 ---
 
-## ▶️ Exemplo de execução
+## ▶️ Exemplo em execução
 
 ```java
 package br.com.kadoozin.cadastro_de_ninjas;
