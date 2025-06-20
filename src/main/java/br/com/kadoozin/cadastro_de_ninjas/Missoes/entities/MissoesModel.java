@@ -1,6 +1,6 @@
-package br.com.kadoozin.cadastro_de_ninjas.Missoes;
+package br.com.kadoozin.cadastro_de_ninjas.Missoes.entities;
 
-import br.com.kadoozin.cadastro_de_ninjas.Ninjas.NinjaModel;
+import br.com.kadoozin.cadastro_de_ninjas.Ninjas.entities.NinjaModel;
 import jakarta.persistence.*;
 import lombok.*;
 
