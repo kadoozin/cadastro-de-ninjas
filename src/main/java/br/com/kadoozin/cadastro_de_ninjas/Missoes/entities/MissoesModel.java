@@ -1,6 +1,7 @@
 package br.com.kadoozin.cadastro_de_ninjas.Missoes.entities;
 
 import br.com.kadoozin.cadastro_de_ninjas.Ninjas.entities.NinjaModel;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -23,5 +24,6 @@ public class MissoesModel {
     private String dificuldade;
 
     @OneToMany(mappedBy = "missoes")
+    @JsonIgnore
     private List<NinjaModel> ninjas;
 }
