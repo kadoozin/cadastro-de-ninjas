@@ -4,6 +4,7 @@ import br.com.kadoozin.cadastro_de_ninjas.Ninjas.dtos.NinjaDTO;
 import br.com.kadoozin.cadastro_de_ninjas.Ninjas.entities.NinjaModel;
 import br.com.kadoozin.cadastro_de_ninjas.Ninjas.mapper.NinjaMapper;
 import br.com.kadoozin.cadastro_de_ninjas.Ninjas.repository.NinjaRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,14 +12,10 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class NinjaService {
     public NinjaRepository ninjaRepository;
     public NinjaMapper ninjaMapper;
-
-    public NinjaService(NinjaRepository ninjaRepository, NinjaMapper ninjaMapper) {
-        this.ninjaRepository = ninjaRepository;
-        this.ninjaMapper = ninjaMapper;
-    }
 
     public List<NinjaDTO> mostrarTodosOsNinjas(){
         List<NinjaModel> ninjas = ninjaRepository.findAll();
