@@ -6,27 +6,27 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class NinjaMapper {
-    public NinjaModel map(NinjaDTO ninjaDTO){
-        NinjaModel ninjaModel = new NinjaModel();
+    public NinjaModel map(NinjaDTO dto){
+        NinjaModel model = new NinjaModel();
 
-        ninjaModel.setId(ninjaDTO.getId());
-        ninjaModel.setNome(ninjaDTO.getNome());
-        ninjaModel.setIdade(ninjaDTO.getIdade());
-        ninjaModel.setAldeia(ninjaDTO.getAldeia());
-        ninjaModel.setMissoes(ninjaDTO.getMissoes());
+        model.setId(dto.getId());
+        model.setNome(dto.getNome());
+        model.setIdade(dto.getIdade());
+        model.setAldeia(dto.getAldeia());
+        model.setMissoes(dto.getMissoes());
 
-        return ninjaModel;
+        return model;
     }
 
-    public NinjaDTO map(NinjaModel ninjaModel){
-        NinjaDTO ninjaDTO = new NinjaDTO();
+    public NinjaDTO map(NinjaModel model){
+        NinjaDTO dto = new NinjaDTO();
 
-        ninjaDTO.setId(ninjaModel.getId());
-        ninjaDTO.setNome(ninjaModel.getNome());
-        ninjaDTO.setIdade(ninjaModel.getIdade());
-        ninjaDTO.setAldeia(ninjaModel.getAldeia());
-        ninjaDTO.setMissoes(ninjaModel.getMissoes());
+        dto.setId(model.getId());
+        dto.setNome(model.getNome());
+        dto.setIdade(model.getIdade());
+        dto.setAldeia(model.getAldeia());
+        dto.setMissoes(model.getMissoes());
 
-        return ninjaDTO;
+        return dto;
     }
 }

@@ -1,16 +1,12 @@
 package br.com.kadoozin.cadastro_de_ninjas.Ninjas.controller;
 
 import br.com.kadoozin.cadastro_de_ninjas.Ninjas.dtos.NinjaDTO;
-import br.com.kadoozin.cadastro_de_ninjas.Ninjas.entities.NinjaModel;
 import br.com.kadoozin.cadastro_de_ninjas.Ninjas.service.NinjaService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.ResourceBundle;
 
 @RestController
 @RequestMapping("/ninjas")
