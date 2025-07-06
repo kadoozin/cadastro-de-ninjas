@@ -12,10 +12,14 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-@RequiredArgsConstructor
 public class NinjaService {
-    public NinjaRepository ninjaRepository;
-    public NinjaMapper ninjaMapper;
+    public final NinjaRepository ninjaRepository;
+    public final NinjaMapper ninjaMapper;
+
+    public NinjaService(NinjaRepository ninjaRepository, NinjaMapper ninjaMapper) {
+        this.ninjaRepository = ninjaRepository;
+        this.ninjaMapper = ninjaMapper;
+    }
 
     public List<NinjaDTO> mostrarTodosOsNinjas(){
         List<NinjaModel> ninjas = ninjaRepository.findAll();

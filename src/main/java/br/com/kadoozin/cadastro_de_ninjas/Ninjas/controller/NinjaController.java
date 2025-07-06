@@ -4,6 +4,7 @@ import br.com.kadoozin.cadastro_de_ninjas.Ninjas.dtos.NinjaDTO;
 import br.com.kadoozin.cadastro_de_ninjas.Ninjas.entities.NinjaModel;
 import br.com.kadoozin.cadastro_de_ninjas.Ninjas.service.NinjaService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,10 +13,13 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 @RestController
-@RequiredArgsConstructor
 @RequestMapping("/ninjas")
 public class NinjaController {
-    private NinjaService ninjaService;
+    private  final NinjaService ninjaService;
+
+    public NinjaController(NinjaService ninjaService) {
+        this.ninjaService = ninjaService;
+    }
 
     @PostMapping("/adicionar")
     public ResponseEntity<String> criarNinja(@RequestBody NinjaDTO ninja) {
@@ -37,8 +41,8 @@ public class NinjaController {
 
     @GetMapping("/listar")
     public ResponseEntity<List<NinjaDTO>> mostrarTodosOsNinjas() {
-        List<NinjaDTO> listarNinjas = ninjaService.mostrarTodosOsNinjas();
-        return ResponseEntity.ok(listarNinjas);
+        List<NinjaDTO> listar = ninjaService.mostrarTodosOsNinjas();
+        return ResponseEntity.ok(listar);
     }
 
     @PatchMapping("/atualizar/{id}")
