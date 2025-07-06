@@ -11,6 +11,7 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 @Entity
+@ToString(exclude = "missoes")
 @Table(name = "tb_missoes")
 public class MissoesModel {
     @Id
