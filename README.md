@@ -1,4 +1,4 @@
-# 💻 Projeto: Cadastro de Ninjas (Em andamento...)
+# 💻 Projeto: Cadastro de Ninjas
 
 > **⚠️ Aviso:** Este projeto é apenas uma **Prática** de programação com Java, utilizando o framework SpringBoot.
 ---
